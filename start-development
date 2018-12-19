@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+source environment
+export FLASK_DEBUG=true
+export FLASK_PRODUCTION=false
+flask run --host=0.0.0.0

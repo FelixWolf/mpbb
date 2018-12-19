@@ -1,0 +1,210 @@
+<%inherit file='layouts/default.htm'/>
+<h1>General Questions</h1>
+<div class="row">
+    <div class="col-10 mx-auto">
+        <div class="accordion" id="faqA">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#faqAA" aria-expanded="false" aria-controls="faqAA">
+                          Q: Is this allowed / "legal" / against the terms of services?
+                        </button>
+                      </h5>
+                </div>
+                <div id="faqAA" class="collapse" aria-labelledby="headingOne" data-parent="#faqA">
+                    <div class="card-body">
+                        Yes.<br/>
+                        This is a off site service which is not operated on a Linden Lab server.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqAB" aria-expanded="false" aria-controls="faqAB">
+                      Q: How does the login work?
+                    </button>
+                  </h5>
+                </div>
+                <div id="faqAB" class="collapse" aria-labelledby="headingTwo" data-parent="#faqA">
+                    <div class="card-body">
+                        Simply put your username in the field, complete the captcha, and click "Send me a link!". This will send you a message in-world that looks like this:
+                        <br/><code>[01:23] Softhyena.com: Hello! Someone from the IP address 1.2.3.4 has requested to log into Marketplace Buyer Beware. If you did not request this, you can choose to ignore it or report it to Chaser Zaks.
+                        <br/>If you did request to log in, click this link to complete the login: https://mpbb.softhyena.com/login?finish=mpzkKPaXouXRjpuJYD3k4wwRAsoK9oy3q_9Jn4y3DcwTgwCP</code>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqAC" aria-expanded="false" aria-controls="faqAC">
+                          Q: Is the login secure?
+                        </button>
+                      </h5>
+                </div>
+                <div id="faqAC" class="collapse" aria-labelledby="headingThree" data-parent="#faqA">
+                    <div class="card-body">
+                        Yes, absolutely! We don't store passwords on the site so there is no risks involved.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqAD" aria-expanded="false" aria-controls="faqAD">
+                          Q: This is illegal / smearing / shaming / etc! Remove me or else!
+                        </button>
+                      </h5>
+                </div>
+                <div id="faqAD" class="collapse" aria-labelledby="headingThree" data-parent="#faqA">
+                    <div class="card-body">
+                        This service is based in the United States of America and is not violating any laws.<br/>
+                        Linden Lab's Terms of Service do not apply on this site.<br/>
+                        Threats will not be taken lightly and will be elevated to authorities if needed.<br/>
+                        If you do not want to be on this list, please submit an appeal.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqAC" aria-expanded="false" aria-controls="faqAC">
+                          Q: Is this open source?
+                        </button>
+                      </h5>
+                </div>
+                <div id="faqAC" class="collapse" aria-labelledby="headingThree" data-parent="#faqA">
+                    <div class="card-body">
+                        Yes! Please fork our code or take a peak inside!<br/>
+                        <a href="https://github.com/FelixWolf/mpbb">https://github.com/FelixWolf/mpbb</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1>Reporting Abuse</h1>
+<div class="row">
+    <div class="col-10 mx-auto">
+        <div class="accordion" id="faqB">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#faqBA" aria-expanded="false" aria-controls="faqBA">
+                          Q: Will my information be shown to people?
+                        </button>
+                      </h5>
+                </div>
+                <div id="faqBA" class="collapse" aria-labelledby="headingOne" data-parent="#faqB">
+                    <div class="card-body">
+                        Yes and no.<br/>
+                        We use your avatar's initials. EG, if you have the username Chaser Zaks, you will be shown as "C.Z".<br/>
+                        I am aware this will result in name conflicts. This is intentional.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqBB" aria-expanded="false" aria-controls="faqBB">
+                      Q: I reported someone but their store isn't flagged!
+                    </button>
+                  </h5>
+                </div>
+                <div id="faqBB" class="collapse" aria-labelledby="headingTwo" data-parent="#faqB">
+                    <div class="card-body">
+                        Firstly, thank you very much for your report! It is very valuable. However because people <u>will</u> abuse this, I do moderate each and every report to make sure that it is genuine.<br/>
+                        Your report will still be visible on the site, but it will be in a <B>PENDING</B> state, as such has no effect on the store's status. Once I confirm the evidence is legit and isn't spam, it will be <B>CONFIRMED</B>.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqBC" aria-expanded="false" aria-controls="faqBC">
+                          Q: I accidentally submitted a invalid report / forgot to add info!
+                        </button>
+                      </h5>
+                </div>
+                <div id="faqBC" class="collapse" aria-labelledby="headingThree" data-parent="#faqA">
+                    <div class="card-body">
+                        No worries! As long as the report is in the <B>PENDING</B> state, it will be editable. You can remove and add information as much as you need to.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h1>Filing an Appeal</h1>
+<div class="row">
+    <div class="col-10 mx-auto">
+        <div class="accordion" id="faqC">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#faqCA" aria-expanded="false" aria-controls="faqCA">
+                          Q: How do I file an appeal.
+                        </button>
+                      </h5>
+                </div>
+                <div id="faqCA" class="collapse" aria-labelledby="headingOne" data-parent="#faqC">
+                    <div class="card-body">
+                        1. Remove all the ripped / stolen / illegal acquired content from your store.<br/>
+                        2. Go to <a href="https://mpbb.softhyena.com/appeal">https://mpbb.softhyena.com/appeal</a>.<br/>
+                        3. Fill out required information.<br/>
+                        4. Submit and wait.<br/>
+                        <br/>
+                        Appeals will be made PUBLICLY VISIBLE, minus email address and contact details. So please avoid putting personally identifying information in any other field that isn't for contact purposes.<br/>
+                        <B>Repeated false or non-complying appeals will result in banning from the appeal system and may result in permanent listing on the site.<b/>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCB" aria-expanded="false" aria-controls="faqCB">
+                      Q: My appeal hasn't been processed yet, what do I do?
+                    </button>
+                  </h5>
+                </div>
+                <div id="faqCB" class="collapse" aria-labelledby="headingTwo" data-parent="#faqC">
+                    <div class="card-body">
+                        I manually go through each and every appeal. You will need to give me at least a week to process them.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCC" aria-expanded="false" aria-controls="faqCC">
+                          Q: My appeal got rejected, what do I do?
+                        </button>
+                      </h5>
+                </div>
+                <div id="faqCC" class="collapse" aria-labelledby="headingThree" data-parent="#faqC">
+                    <div class="card-body">
+                        Comply with the requirements in the appeal rejection notice and file another appeal.<br/>
+                        <B>Repeated false or non-complying appeals will result in banning from the appeal system and may result in permanent listing on the site.<b/>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCD" aria-expanded="false" aria-controls="faqCD">
+                          Q: How do I appeal a ban from the commenting / reporting?
+                        </button>
+                      </h5>
+                </div>
+                <div id="faqCD" class="collapse" aria-labelledby="headingThree" data-parent="#faqC">
+                    <div class="card-body">
+                        Please file a support ticket at <a href="https://support.softhyena.com/">https://support.softhyena.com/</a> or contact Chaser Zaks in-world.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

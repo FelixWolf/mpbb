@@ -1,0 +1,72 @@
+<%
+    import datetime
+    _body = capture(self.body)
+%>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>${page_title or "Missing {page_title}!"}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <style>
+            body {
+            padding-top: 5rem;
+            }
+            .starter-template {
+            padding: 3rem 1.5rem;
+            text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="/">MPBB</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/report">Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/appeal">Appeal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listing">Listing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/faq">F.A.Q.</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/recent" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recent</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="/recent/appeals">Appeals</a>
+                            <a class="dropdown-item" href="/recent/reports">Reports</a>
+                            <a class="dropdown-item" href="/recent/additions">Additions</a>
+                            <a class="dropdown-item" href="/recent/removals">Removals</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</button>
+            </div>
+        </nav>
+
+        <main role="main" class="container">
+            ${_body}
+        </main>
+        
+        <hr/>
+        <footer class="container">
+            <p>&copy; Softhyena.com 2018 - ${datetime.datetime.now().year}. MPBB and Softhyena.com are neither associated or endorsed by Linden Lab&reg; or Second Life&reg;.</p>
+        </footer>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.15/bootstrap-native-v4.min.js"></script>
+    </body>
+</html>
