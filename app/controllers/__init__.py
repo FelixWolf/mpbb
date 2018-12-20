@@ -1,4 +1,6 @@
 __all__ = [
     "index",
-    "login"
+    "login",
+    "report",
+    "appeal"
 ]

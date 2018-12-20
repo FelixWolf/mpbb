@@ -1,0 +1,132 @@
+<%inherit file='layouts/default.htm'/>
+<div class="py-5 text-center">
+    <h2>Seller appeal form</h2>
+    <div class="alert alert-warning" role="alert">
+        False, spam, or troll appeals may result in being banned from this service.<br/>
+        Being banned means you will not be able to submit any more appeals!
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Help with appealing</span>
+        </h4>
+        <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                    <h6 class="my-0">Contact info</h6>
+                    <small class="text-muted">We use this to contact you if we need more information.
+                    This information will not be made public with exception of username, which will be displayed as initials in the report.</small>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                    <h6 class="my-0">Owning up</h6>
+                    <small class="text-muted">We require you to own up to what you did. Please specify what you did. Include names of stolen assets.</small>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                    <h6 class="my-0">First name and Last name</h6>
+                    <small class="text-muted">This is not your or their real life information! This is your and their Second Life username.
+                    If their name is like "Chaser Zaks", you put "Chaser" as first name, "Zaks" as last name. If it looks like "Chasertester", you put "Chasertester" as first name and "Resident" as last name.</small>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                    <h6 class="my-0">Comments</h6>
+                    <small class="text-muted">If you have information you want to put as a seller on your info page, put it here.</small>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                    <h6 class="my-0">Consent and Liability</h6>
+                    <small class="text-muted">This is to ensure people do not file false appeals.
+                    Consenting to contact is not required to submit a appeal, but lets us know if you would be willing to help follow up on appeals.</small>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-8 order-md-1">
+        <form class="needs-validation" novalidate method="POST" action="/report">
+            <h4 class="mb-3">Your contact information</h4>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName">First name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Second Life First name" value="" required>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="lastName">Last name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Second Life Last name" value="" required>
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                <div class="text-muted">
+                    If you rather be contacted by email if we need more information, please fill this out.
+                </div>
+            </div>
+            
+            <br/>
+            <h4 class="mb-3">About your store</h4>
+            <div class="mb-3">
+                <label for="storeURL">Store URL</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="storeURL" placeholder="https://marketplace.secondlife.com/stores/111518" value="" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Your username is required.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="evidence">Please explain why you should be removed from the listing</label>
+                <textarea class="form-control" id="evidence" rows=5></textarea>
+            </div>
+            
+            <div class="mb-3">
+                <label for="comments">Any comments? <span class="text-muted">(Please keep it clean)</span></label>
+                <textarea class="form-control" id="comments" rows=5></textarea>
+            </div>
+            
+            <hr class="mb-4"/>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="confirmRemoved">
+                <label class="custom-control-label" for="confirmRemoved">I have removed all stolen/ripped/copybotted content from my store.</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="confirmNoRepeats">
+                <label class="custom-control-label" for="confirmNoRepeats">I understand that relisting stolen/ripped/copybotted content will get me a permanent spot on this site.</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="statsAlts">
+                <label class="custom-control-label" for="statsAlts">I confirm that I am not selling stolen/ripped/copybotted content on alternative accounts.</label>
+            </div>
+            
+            <hr class="mb-4"/>
+            <h4 class="mb-3">Consent and Liability</h4>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="agreeContact">
+                <label class="custom-control-label" for="agreeContact">I agree to be contacted for further information if needed.</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="agreeInformation">
+                <label class="custom-control-label" for="agreeInformation">The information I've provided on this form is correct to the best of my knowledge. I understand that providing false information could result in being banned from this service and being reported to the seller for harassment.</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="agreeTransparency">
+                <label class="custom-control-label" for="agreeTransparency">I understand my comments and appeal will be made public for transparency purposes.</label>
+            </div>
+            <hr class="mb-4"/>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Submit appeal</button>
+        </form>
+    </div>
+</div>

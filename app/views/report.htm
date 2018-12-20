@@ -1,0 +1,181 @@
+<%inherit file='layouts/default.htm'/>
+<div class="py-5 text-center">
+    <h2>Abusive seller report form</h2>
+    <div class="alert alert-warning" role="alert">
+        False, spam, or troll reports may result in being banned from this service.<br/>
+        Sellers may be notified of abusive false reports to help protect them.
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Help with reporting</span>
+        </h4>
+        <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                    <h6 class="my-0">Contact info</h6>
+                    <small class="text-muted">We use this to contact you if we need more information.
+                    This information will not be made public with exception of username, which will be displayed as initials in the report.</small>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                    <h6 class="my-0">Collecting evidence</h6>
+                    <small class="text-muted">Please provide screenshots of the original asset(EG: Model comparisons, screenshots from a game, etc).
+                    <a href="https://i.imgur.com/zCpXzgV.png">Here is an example of good evidence</a>. These can be uploaded to <a href="https://imgur.com">Imgur</a> or other image sharing sites.</small>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                    <h6 class="my-0">First name and Last name</h6>
+                    <small class="text-muted">This is not your or their real life information! This is your and their Second Life username.
+                    If their name is like "Chaser Zaks", you put "Chaser" as first name, "Zaks" as last name. If it looks like "Chasertester", you put "Chasertester" as first name and "Resident" as last name.</small>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                    <h6 class="my-0">Comments</h6>
+                    <small class="text-muted">If you have information you want to put out about the seller, such as hostile interactions, false review flagging, etc. Please feel free to bring it up here.</small>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                    <h6 class="my-0">Consent and Liability</h6>
+                    <small class="text-muted">This is to ensure people do not file false claims.
+                    Consenting to contact is not required to submit a report, but lets us know if you would be willing to help follow up evidence reports.</small>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-8 order-md-1">
+        <form class="needs-validation" novalidate method="POST" action="/report">
+            <h4 class="mb-3">Your contact information</h4>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName">First name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Second Life First name" value="" required>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="lastName">Last name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Second Life Last name" value="" required>
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                <div class="text-muted">
+                    If you rather be contacted by email if we need more information, please fill this out.
+                </div>
+            </div>
+            
+            <br/>
+            <h4 class="mb-3">About the seller</h4>
+            <div class="mb-3">
+                <label for="storeURL">Store URL</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="storeURL" placeholder="https://marketplace.secondlife.com/stores/111518" value="" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Your username is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="sellerfirstName">Seller first name</label>
+                    <input type="text" class="form-control" id="sellerfirstName" placeholder="Second Life First name" value="" required>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="sellerlastName">Seller last name</label>
+                    <input type="text" class="form-control" id="sellerlastName" placeholder="Second Life Last name" value="" required>
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="address2">Why are you reporting this store?</label>
+                <div class="d-block my-3">
+                    <div class="custom-control custom-radio">
+                        <input id="ripping" name="reportReason" type="radio" class="custom-control-input" checked required>
+                        <label class="custom-control-label" for="ripping">Ripped content</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="copybot" name="reportReason" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="copybot">Copybotted content</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="feebies" name="reportReason" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="feebies">Relisting freebies for profit</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="creatortos" name="reportReason" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="creatortos">Violating creator ToS</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="other" name="reportReason" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="other">Other <span class="text-muted">(Please specify in comments)</span></label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="comments">Any comments? <span class="text-muted">(Please keep it clean)</span></label>
+                <textarea class="form-control" id="comments" rows=5></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="evidence">Please provide evidence of stolen content <span class="text-muted">(Screenshots, Links to stores, etc)</span></label>
+                <textarea class="form-control" id="evidence" rows=5></textarea>
+            </div>
+            
+            <hr class="mb-4"/>
+            <h4 class="mb-3">Optional information for statistical purposes</h4>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="statsBoughtLegit">
+                <label class="custom-control-label" for="statsBoughtLegit">I have bought <i>non-stolen</i> content from this store</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="statsBoughtStolen">
+                <label class="custom-control-label" for="statsBoughtStolen">I have (unknowingly) bought <i>stolen</i> content from this store</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="statsMixed">
+                <label class="custom-control-label" for="statsMixed">The seller is selling a mix of original and stolen content</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="statsClaim">
+                <label class="custom-control-label" for="statsClaim">The seller <i>explicitly</i> claims to have made stolen content</label>
+            </div>
+            
+            <hr class="mb-4"/>
+            <h4 class="mb-3">Consent and Liability</h4>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="agreeContact">
+                <label class="custom-control-label" for="agreeContact">I agree to be contacted for further information if needed.</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="agreeInformation">
+                <label class="custom-control-label" for="agreeInformation">The information I've provided on this form is correct to the best of my knowledge. I understand that providing false information could result in being banned from this service and being reported to the seller for harassment.</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="agreeTransparency">
+                <label class="custom-control-label" for="agreeTransparency">I understand my comments and evidence will be made public for transparency purposes.</label>
+            </div>
+            <hr class="mb-4"/>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Submit report</button>
+        </form>
+    </div>
+</div>
